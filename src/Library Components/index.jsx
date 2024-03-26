@@ -1,8 +1,11 @@
 import React from 'react';
 import { Book, addBook, showAllBooks, myLibrary } from '../functions';
+import { FormComp } from './formComp';
 
 const BookBox = () => {
   return (
+    <div>
+        <FormComp/>
     <section className='book'>
       {myLibrary.map((v, i) => (
         <article key={i}>
@@ -12,6 +15,7 @@ const BookBox = () => {
         </article>
       ))}
     </section>
+    </div>
   );
 };
 export default BookBox;
