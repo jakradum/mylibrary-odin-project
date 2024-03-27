@@ -1,6 +1,7 @@
 import React from 'react';
 
-export const myLibrary = [];
+export const myLibrary = [{ title: '3 mistakes of your life', author: 'bhetan chagat', read: true }];
+export const myUpdatedLibrary = [];
 
 export class Book {
   constructor(title, author, read) {
@@ -12,10 +13,9 @@ export class Book {
 
 export function addBook(title, author, read) {
   let newBook = new Book(title, author, read);
-  myLibrary.push(newBook);
+  myUpdatedLibrary.push(newBook);
+  return newBook;
 }
-
-addBook('3 mistakes of my life', 'Bhetan Chagat', false);
 
 export const showAllBooks = (myLibrary) => {
   return myLibrary.map((book) => {
