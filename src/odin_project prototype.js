@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const myLibrary = [{ title: '3 mistakes of your life', author: 'bhetan chagat', read: true }];
+export const myLibrary = [
+  { title: '3 mistakes of your life', author: 'bhetan chagat', read: true },
+  { title: 'Pife of Lie', author: 'Mann Yartel', read: false },
+  { title: 'Grated Expectations', author: 'Charcuterie Dickens', read: false },
+];
 export const myUpdatedLibrary = [];
 
 export class Book {
@@ -13,12 +17,18 @@ export class Book {
 
 export function addBook(title, author, read) {
   let newBook = new Book(title, author, read);
-  myUpdatedLibrary.push(newBook);
+  myLibrary.push(newBook);
   return newBook;
 }
 
-export const showAllBooks = (myLibrary) => {
-  return myLibrary.map((book) => {
-    return book.title;
-  });
-};
+export function deleteBook(index) {
+  const bookToDelete = myLibrary.find((v, i) => i === index);
+  if (index < 3) {
+  } else {
+    return myLibrary.splice(myLibrary.indexOf(bookToDelete), 1);
+  }
+}
+
+export function changeRead(index) {
+  myLibrary[index].read = !myLibrary[index].read;
+}

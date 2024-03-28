@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { addBook, myLibrary } from '../odin_project prototype';
+import { addBook, deleteBook, myLibrary } from '../odin_project prototype';
 
-export const FormComp = ({onAddBook}) => {
-
+export const FormComp = ({ onAddBook }) => {
   const [formData, setFormData] = useState({
     title: '',
     author: '',
@@ -23,10 +22,7 @@ export const FormComp = ({onAddBook}) => {
         <label>
           Title:
           <input
-            onChange={(e) => {
-              setFormData({ ...formData, title: e.target.value });
-              console.log(formData);
-            }}
+            onChange={(e) => setFormData({ ...formData, title: e.target.value })}
             className="form-control form-control-lg"
             type="text"
             name="title"
@@ -38,7 +34,6 @@ export const FormComp = ({onAddBook}) => {
           <input
             onChange={(e) => {
               setFormData({ ...formData, author: e.target.value });
-              console.log(formData);
             }}
             className="form-control form-control-lg"
             type="text"
@@ -51,7 +46,6 @@ export const FormComp = ({onAddBook}) => {
           <input
             onChange={(e) => {
               setFormData({ ...formData, read: e.target.checked });
-              console.log(formData);
             }}
             className="form-check-input"
             type="checkbox"
@@ -61,7 +55,7 @@ export const FormComp = ({onAddBook}) => {
           />
         </label>
         <button type="submit" className="btn btn-light">
-          Submit
+          Add to Collection
         </button>
       </form>
     </div>

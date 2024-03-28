@@ -20,18 +20,11 @@ code {
   align-items: center;
   justify-content: center;
 }
-main{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  grid-auto-rows: minmax(5rem, auto);
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  height: auto;
+button{
+  margin: 1.5rem;
 }
-main > * { /* specify how much space grid items going to the next row will take up */
-  grid-column: span 2;
-}
+
+
 .book h2, h4{
   text-transform: capitalize;
 }
@@ -62,4 +55,19 @@ input{
 }
 .grid > * { /* specify how much space grid items going to the next row will take up */
   grid-column: span 2;
+}
+label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+input.form-check-input{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+label, text{
+  justify-self:start;
+}
+form.flexcol{
+  justify-self: center;
 }
