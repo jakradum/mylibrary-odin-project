@@ -47,7 +47,7 @@ export const FormComp = ({ onAddBook }) => {
             onChange={(e) => {
               setFormData({ ...formData, read: e.target.checked });
             }}
-            className="form-check-input"
+            
             type="checkbox"
             name="read"
             checked={formData.read}

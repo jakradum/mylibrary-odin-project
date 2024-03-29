@@ -30,5 +30,7 @@ export function deleteBook(index) {
 }
 
 export function changeRead(index) {
+  console.log(myLibrary[index].read);
   myLibrary[index].read = !myLibrary[index].read;
+  console.log(myLibrary[index].read);
 }
