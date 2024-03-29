@@ -8,7 +8,7 @@ A file called odin_project prototype.js in the src folder should have everything
 The assignment required us to create an object prototype with 3 functions - add book, change status of read/unread, and delete book. All 3 of them are handled via javascript and not just through React UI. 
 
 ## React stuff
-The React UI is meant to reflect the properties of the underlying JavaScript object. `addBook`, `deleteBook` etc are JS functions on the prototype along with React states that manage the UI changes. 
+The React UI is meant to reflect the properties of the underlying JavaScript object. Only 1 function - "Loop through the array and show all books" was done using just React. 
 
 # Check out the project here
 [View live](https://jakradum.github.io/mylibrary-odin-project/)
