@@ -9,3 +9,6 @@ The assignment required us to create an object prototype with 3 functions - add 
 
 ## React stuff
 The React UI is meant to reflect the properties of the underlying JavaScript object. `addBook`, `deleteBook` etc are JS functions on the prototype along with React states that manage the UI changes. 
+
+# Check out the project here
+[View live](https://jakradum.github.io/mylibrary-odin-project/)
